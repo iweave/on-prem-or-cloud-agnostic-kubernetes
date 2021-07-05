@@ -1,4 +1,5 @@
 #!/bin/bash
+groupadd admin
 groupadd ubuntu
 useradd -g ubuntu -G admin -s /bin/bash -d /home/ubuntu ubuntu
 mkdir -p /home/ubuntu
