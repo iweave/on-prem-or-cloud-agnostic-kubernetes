@@ -3,7 +3,6 @@
 echo "installing docker"
 if [ "$(lsb_release -cs)" == "focal" ] ; then
   swapoff -a
-  export ADDITIONAL_APT="gnupgp lsb-release"
 fi
 apt-get update
 apt-get install -y \
