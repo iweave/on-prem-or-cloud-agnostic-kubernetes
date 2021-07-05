@@ -3,6 +3,7 @@
 echo "installing docker"
 if [ "$(lsb_release -cs)" == "focal" ] ; then
   swapoff -a
+  sed -i 's/\/swapfile /#\/swapfile /' /etc/fstab
 fi
 apt-get update
 apt-get install -y \
