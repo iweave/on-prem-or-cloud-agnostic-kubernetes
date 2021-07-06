@@ -63,7 +63,7 @@ apt-get install -y kubelet kubeadm kubectl
 
 # DigitalOcean with firewall (VxLAN with Flannel) - could be resolved in the future by allowing IP-in-IP in the firewall settings
 echo "deploying kubernetes (with canal)..."
-kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address="10.10.138.11" --apiserver-cert-extra-sans=192.96.159.198,10.10.138.11 # add --apiserver-advertise-address="ip" if you want to use a different IP address than the main server IP
+kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address="192.96.159.198" #--apiserver-cert-extra-sans=192.96.159.198,10.10.138.11 # add --apiserver-advertise-address="ip" if you want to use a different IP address than the main server IP
 export KUBECONFIG=/etc/kubernetes/admin.conf
 curl https://docs.projectcalico.org/manifests/canal.yaml -O
 kubectl apply -f canal.yaml
