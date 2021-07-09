@@ -70,5 +70,5 @@ export KUBECONFIG=/etc/kubernetes/admin.conf
 curl https://docs.projectcalico.org/manifests/canal.yaml -O
 kubectl apply -f canal.yaml
 echo "Renaming get-context to remove '@'"
-kubctl config rename-context 'kuberenetes-admin@kubernetes' 'profitbricks'
+kubectl config rename-context 'kuberenetes-admin@kubernetes' 'profitbricks'
 
