@@ -69,3 +69,6 @@ kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address="10.
 export KUBECONFIG=/etc/kubernetes/admin.conf
 curl https://docs.projectcalico.org/manifests/canal.yaml -O
 kubectl apply -f canal.yaml
+echo "Renaming get-context to remove '@'"
+kubctl config rename-context 'kuberenetes-admin@kubernetes' 'profitbricks'
+
