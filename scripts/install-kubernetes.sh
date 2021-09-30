@@ -72,3 +72,5 @@ kubectl apply -f canal.yaml
 echo "Renaming get-context to remove '@'"
 kubectl config rename-context 'kubernetes-admin@kubernetes' 'profitbricks'
 
+echo "Installing etcd client"
+apt install etcd-client
